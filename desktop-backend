@@ -1,0 +1,174 @@
+// backend triggers
+
+/******************************************** Spaces backend ***********************************************/
+
+// 
+// Identifier: add-space
+// Description: Use to add a new space of the resturant in db
+// Parameters: spaceDetails (Details of the space to be added)
+// 
+
+
+// 
+// Identifier: update-space
+// Description: Use this to add a new space of the resturant in db
+// Parameters:  spaceId (Id of the space to be updated)
+//              spaceDetails (Details of the space to be added)
+//
+
+
+// 
+// Identifier: delete-space
+// Description: Use this to delete an existing space of the resturant in db
+// Parameters:  spaceId (Id of the space to be updated)
+//
+
+
+// 
+// Identifier: get-space
+// Description: Use this to get an existing space of the resturant 
+// Parameters:  spaceId (Id of the space to be fetched)
+//
+
+
+
+
+/********************************************** Menu backend ***********************************************/
+
+
+// 
+// Identifier: add-menu-category
+// Description: Use this to add new menu category
+// Parameters: menuCategoryDetails (title, icon, etc.)
+// 
+
+
+// 
+// Identifier: get-menu-categories
+// Description: Use this to get all menu categories
+// 
+
+// 
+// Identifier: get-menu-category
+// Description: Use this to get particular menu category details
+// Parameters: menuCategoryId (Id of the menu category to be fetched.)
+// 
+
+
+// 
+// Identifier: import-menu
+// Description: Use this to import menu into db using excel or csv
+// Parameters: file_path (path of the file to be imported: must be either csv or excel)
+//             menuType (menu in which items to be imported)
+
+
+// 
+// Identifier: clear-menu
+// Description: Use this to clear all menu items from the db
+// Parameters: menuType (pass this to clear particular menu like food, drinks, etc.)
+// 
+
+
+// 
+// Identifier: add-menu-item
+// Description: Use this to add single menu item
+// Parameters: menuType (menu in which is item to be added)
+//             itemDetails (Details of the item to be added: 
+//                    title,
+//                    portions{portionType: price, portionType: price}
+//             )
+// 
+
+
+// 
+// Identifier: delete-menu-item
+// Description: Use this to delete single menu item from the db
+// Parameters: itemId (id of the item to be deleted), 
+//             menuType (menu from which item is to be deleted)
+// 
+
+
+// 
+// Identifier: update-menu-item
+// Description: Use this to update single menu item
+// Parameters: itemId (id of the item to be updated),
+//             itemDetails (updated item details, should match the payload of add-menu-item)
+//             menuType (menu of which item is to be updated)
+// 
+
+
+// 
+// Identifier: get-menu
+// Description: Use this to get a particular menu or all menus at once
+// Parameters: menuType ( optional param, default will be all )
+// Returns: {
+//             menuType: {items...},         
+//             menuType: {items...},
+//             ...
+//          }
+// 
+
+
+// 
+// Identifier: filter-menu-items
+// Description: Use this to filter out menu items from all the menus
+// Parameters: itemTitle (optional)
+//             itemType (optional)
+// Disclaimer: Atleast one param must be passed in order to get results otherwise will return empty list []
+// Returns: [
+//     {item...},
+//     {item...}, ...
+// ]
+// 
+
+
+/******************************************** Orders backend ***********************************************/
+
+// 
+// Identifier: place-order
+// Description: Use this to place an order for active table
+// Parameters: tableId (Identifier of the table placing the order),
+//             orderDetails (Order details such items with their portion and quantity)
+// 
+
+
+// 
+// Identifier: update-order
+// Description: Use this to place an order for active table
+// Parameters: tableId (Identifier of the table placing the order),
+//             orderDetails (Order details such items with their portion and quantity)
+// 
+
+
+// 
+// Identifier: cancel-order
+// Description: Use this to cancel the order for the table
+// Parameters: tableId (Identifier of table of which order is to be cancelled)
+//             orderId (Id of the order to be cancelled)
+// 
+
+// 
+// Identifier: get-order
+// Description: Use this to get a particular order
+// Parameters: tableId (Id of the table of that order)
+// Returns: Current active order for that table
+// 
+
+/******************************************** Settings backend ***********************************************/
+
+// 
+// Identifier: update-profile
+// Description: Use this to update profile of the restaurant
+// Parameters: restaurantDetails (Details of the restaurant)
+// 
+
+// 
+// Identifier: get-profile
+// Description: Use this to get profile of the restaurant
+// 
+
+// 
+// Identifier: update-profile-icon
+// Description: Use this to update profile icon of the restaurant
+// Parameters: file_path (file path of the icon to be added)
+// 
